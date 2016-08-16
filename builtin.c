@@ -25,7 +25,7 @@ void do_echo(char *tcmd,char *name);
 void parse_singalcmd(void);
 
 //内置命令列表
-char *builtinList[] = {"echo","pwd","jobs","kill","fg","bg""cd","exit","ulimit","umask","history",NULL};
+char *builtinList[] = {"echo","pwd","jobs","kill","fg","bg","cd","exit","ulimit","umask","history",NULL};
 
 BUILTIN_CMD builtins[] = 
 {
