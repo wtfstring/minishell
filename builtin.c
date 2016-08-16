@@ -73,8 +73,15 @@ void do_exit(char *tcmd,char *name)
 
 void do_cd(char *tcmd,char *name)
 {
+	char cwd[100];
+	if (getcwd(cwd,99) == NULL)
+		ERR_EXIT("getcwd");
+	printf("当前路径为：%s\n",cwd);
+	chdir(tcmd);
+	if (getcwd(cwd,99) == NULL)
+		ERR_EXIT("getcwd");
+	printf("更改后路径为：%s\n",cwd);
     printf("%s\n",name);
-	
 }
 
 void do_type(char *tcmd,char *name)
